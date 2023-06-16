@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồ án</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="/index.html" id="home">HANOI FOOTBALL</a>
+                </div>
+    
+                <form  class="header-search">
+                    <input id="search" type="search" placeholder="Tìm kiếm sân bóng">
+                    <button type="submit" id="search-btn">
+                        <label for="search">
+                            <i class="header-search-icon fa-solid fa-magnifying-glass"></i>
+                        </label>
+                    </button>
+                </form >
+    
+                <div class="header-user">
+                    <a href="./login/login.html" class="header-user-link">
+                        <div class="header-user-login">Đăng nhập</div>
+                        <span class="header-user-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    </a>
+                </div>
+                
+                <div class="header-user-2">
+                    <div class="header-user-name"></div>
+                    <span class="header-user-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+
+                    <div class="header-user-sub">
+                        <a href="#" class="header-user-sub-link">Thông tin cá nhân</a>
+                        <a href="#" id="log_out" class="header-user-sub-link">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider">
+            <div class="slider-list">
+                <span class="slider-btn prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </span>
+                <div class="slider-item">
+                    <a href="#" class="slider-link">
+                        <img class="slider-link-img" src="./img/Sân bóng 12.jpg" alt="Sân bóng đá khu vực Hà Nội">
+                        <!-- <img class="slider-link-img" src="https://cdn.sforum.vn/sforum/wp-content/uploads/2021/02/fantasy-landscape-iPhone-wallpaper-idownloadblog-IEDITWALLS20.11.25104242-@aronvisuals-728x1536-1.jpg" alt="Sân bóng đá khu vực Hà Nội"> -->
+                        
+                    </a>
+                </div>
+
+                <span class="slider-btn next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </span>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- <form class="orientation grid">
+                <div class="orientation-list grid_row">
+                    <div class="grid_col-3 grid_col-6 grid_col-full">
+                        <div class="orientation-item">
+                            Chọn Tỉnh/Thành phố
+                            <span class="orientation-icon"><i class="fa-solid fa-caret-down"></i></span>
+                            <div class="orientation-sub-list">
+                                <div class="orientation-sub-item">Hà Nội</div>
+                                <div class="orientation-sub-item">TP. Hồ Chí Minh</div>
+                                <div class="orientation-sub-item">Hà Nội</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_col-3 grid_col-6 grid_col-full">
+                        <div class="orientation-item">
+                            Chọn Tỉnh/Thành phố
+                            <span class="orientation-icon"><i class="fa-solid fa-caret-down"></i></span>
+                            <div class="orientation-sub-list">
+                                <div class="orientation-sub-item">Hà Nội</div>
+                                <div class="orientation-sub-item">TP. Hồ Chí Minh</div>
+                                <div class="orientation-sub-item">Hà Nội</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_col-3 grid_col-6 grid_col-full">
+                        <div class="orientation-item">
+                            Chọn Tỉnh/Thành phố
+                            <span class="orientation-icon"><i class="fa-solid fa-caret-down"></i></span>
+                            <div class="orientation-sub-list">
+                                <div class="orientation-sub-item">Hà Nội</div>
+                                <div class="orientation-sub-item">TP. Hồ Chí Minh</div>
+                                <div class="orientation-sub-item">Hà Nội</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_col-3 grid_col-6 grid_col-full">
+                        <div class="orientation-item">
+                            Chọn Tỉnh/Thành phố
+                            <span class="orientation-icon"><i class="fa-solid fa-caret-down"></i></span>
+                            <div class="orientation-sub-list">
+                                <div class="orientation-sub-item">Hà Nội</div>
+                                <div class="orientation-sub-item">TP. Hồ Chí Minh</div>
+                                <div class="orientation-sub-item">Hà Nội</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-search">Tìm kiếm</button>
+            </form> -->
+
+            <div class="container-body">
+                <div class="container-body-heading">
+                    <div class="grid">
+                        <h3 class="container-body-title">SÂN BÓNG ĐÁ HÀ NỘI</h3>
+                        <P class="container-body-title-sub">Danh sách sân, giờ trống sân và các bóng đá cỏ nhân tạo cần tìm đối tại Hà Nội được cập nhật liên tục</P>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="grid_row card-list">
+                        <!-- <div class="grid_col-3 grid_col-4 grid_col-6-s">
+                            <div class="card-item">
+                                <a href="#" class="card-item-link">
+                                    <div class="card-item-img">
+                                        <img src="./img/Sân bóng 5.png" alt="">
+                                    </div>
+        
+                                    <div class="card-item-infor">
+                                        <h4 class="card-item-title">Sân bóng Viettel</h4>
+                
+                                        <div class="card-item-price">Giá: <span>400.000 VND</span> / Trận</div>
+                                    </div>
+        
+                                    <div class="card-item-footer">
+                                        <div class="card-item-footer-item">
+                                            <i class="fa-solid fa-check"></i>
+                                            <span>Giữ xe</span>
+                                        </div>
+        
+                                        <div class="card-item-footer-item">
+                                            <i class="fa-solid fa-check"></i>
+                                            <span>Căn tin</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="pagination">
+                        <a href="/listcard.html" id="see_more" class="page-item">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-img">
+                <img src="./img/Bóng đá footer 1.png" alt="footer img">
+            </div>
+
+            <div class="footer-info">
+                <h4 class="footer-info-title">THÔNG TIN LIÊN HỆ</h4>
+
+                <P class="footer-info-text">Công ty Cổ Phần Thương Mại Và Xây Dựng Thế Giới Thể Thao</P>
+                <p class="footer-info-text">Giấy chứng nhận đăng ký kinh doanh số: 0123456789</p>
+                <p class="footer-info-text">Do sở kế hoạch và đầu tư Thành phố Hà Nội cấp ngày: 30/06/2020</p>
+                <p class="footer-info-text">Copyright 2021 HanoiFootball.vn. Bản quyền thuộc về Thế Giới Thể Thao</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="https://unpkg.com/geofirestore@5.2.0/dist/geofirestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/geofire/5.0.1/geofire.min.js"></script>
+    <!-- <script type="module" src="./js/firebase.js"></script> -->
+    <script src="./js/listcard.js"></script>
+    <script src="./js/search.js"></script>
+
+    <!-- Nhúng file js để kiểm tra user đã login hay chưa -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
