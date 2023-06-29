@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đồ án</title>
+    <!-- Link bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Link font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -50,80 +53,40 @@
             </div>
         </div>
 
-        <div class="slider">
-            <div class="slider-list">
-                <span class="slider-btn prev">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </span>
-                <div class="slider-item">
-                    <a href="#" class="slider-link">
-                        <img class="slider-link-img" src="./img/Sân bóng 12.jpg" alt="Sân bóng đá khu vực Hà Nội">
-                        <!-- <img class="slider-link-img" src="https://cdn.sforum.vn/sforum/wp-content/uploads/2021/02/fantasy-landscape-iPhone-wallpaper-idownloadblog-IEDITWALLS20.11.25104242-@aronvisuals-728x1536-1.jpg" alt="Sân bóng đá khu vực Hà Nội"> -->
-                        
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- <div class="carousel-item active">
+                    <a href="#" class="carousel-link">
+                        <img src="./img/Sân bóng 10.jpg" class="d-block w-100" alt="...">
                     </a>
                 </div>
-
-                <span class="slider-btn next">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </span>
+                <div class="carousel-item">
+                    <a href="#" class="carousel-link">
+                        <img src="./img/Sân bóng 11.jpg" class="d-block w-100" alt="...">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" class="carousel-link">
+                        <img src="./img/Sân bóng 12.jpg" class="d-block w-100" alt="...">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" class="carousel-link">
+                        <img src="./img/Sân bóng 13.jpg" class="d-block w-100" alt="...">
+                    </a>
+                </div> -->
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
-        <div class="container">
-            <!-- <form class="orientation grid">
-                <div class="orientation-list grid_row">
-                    <div class="grid_col-3 grid_col-6 grid_col-full">
-                        <div class="orientation-item">
-                            Chọn Tỉnh/Thành phố
-                            <span class="orientation-icon"><i class="fa-solid fa-caret-down"></i></span>
-                            <div class="orientation-sub-list">
-                                <div class="orientation-sub-item">Hà Nội</div>
-                                <div class="orientation-sub-item">TP. Hồ Chí Minh</div>
-                                <div class="orientation-sub-item">Hà Nội</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid_col-3 grid_col-6 grid_col-full">
-                        <div class="orientation-item">
-                            Chọn Tỉnh/Thành phố
-                            <span class="orientation-icon"><i class="fa-solid fa-caret-down"></i></span>
-                            <div class="orientation-sub-list">
-                                <div class="orientation-sub-item">Hà Nội</div>
-                                <div class="orientation-sub-item">TP. Hồ Chí Minh</div>
-                                <div class="orientation-sub-item">Hà Nội</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid_col-3 grid_col-6 grid_col-full">
-                        <div class="orientation-item">
-                            Chọn Tỉnh/Thành phố
-                            <span class="orientation-icon"><i class="fa-solid fa-caret-down"></i></span>
-                            <div class="orientation-sub-list">
-                                <div class="orientation-sub-item">Hà Nội</div>
-                                <div class="orientation-sub-item">TP. Hồ Chí Minh</div>
-                                <div class="orientation-sub-item">Hà Nội</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid_col-3 grid_col-6 grid_col-full">
-                        <div class="orientation-item">
-                            Chọn Tỉnh/Thành phố
-                            <span class="orientation-icon"><i class="fa-solid fa-caret-down"></i></span>
-                            <div class="orientation-sub-list">
-                                <div class="orientation-sub-item">Hà Nội</div>
-                                <div class="orientation-sub-item">TP. Hồ Chí Minh</div>
-                                <div class="orientation-sub-item">Hà Nội</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-search">Tìm kiếm</button>
-            </form> -->
-
+        <div id="container">
             <div class="container-body">
                 <div class="container-body-heading">
                     <div class="grid">
@@ -132,8 +95,11 @@
                     </div>
                 </div>
 
+                <div id="loader"></div>
+                
                 <div class="grid">
                     <div class="grid_row card-list">
+
                         <!-- <div class="grid_col-3 grid_col-4 grid_col-6-s">
                             <div class="card-item">
                                 <a href="#" class="card-item-link">
@@ -186,7 +152,9 @@
         </div>
     </div>
 
-    
+    <!-- Link JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Link data fireBase -->
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
@@ -194,8 +162,11 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
     <script src="https://unpkg.com/geofirestore@5.2.0/dist/geofirestore.js"></script>
     <script src="https://cdn.firebase.com/libs/geofire/5.0.1/geofire.min.js"></script>
-    <!-- <script type="module" src="./js/firebase.js"></script> -->
-    <script src="./js/listcard.js"></script>
+
+    <script src="./js/firebase.js"></script>
+    <!-- <script src="./js/listcard.js"></script> -->
+    
+    <!-- file js search -->
     <script src="./js/search.js"></script>
 
     <!-- Nhúng file js để kiểm tra user đã login hay chưa -->

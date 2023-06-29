@@ -15,6 +15,10 @@ firebase.initializeApp(firebaseConfig);
 
 var database = firebase.firestore();
 
+let loaderElm = document.querySelector('#loader');
+let cardListElm = document.querySelector(".card-list");
+let paginationElm = document.querySelector('.pagination');
+
 // FUSH lên API
 // var test = [
 //     {
@@ -381,18 +385,18 @@ var database = firebase.firestore();
 
 // console.log(test);
 
-async function orderDetails(data) {
-    database
-        .collection("time")
-        .where("id", "==", String(data.times))
-        .get()
-        .then(async function (orderSnapshots) {
-            return orderSnapshots.docs[0].data().price;
-        });
-}
+// async function orderDetails(data) {
+//     database
+//         .collection("time")
+//         .where("id", "==", String(data.times))
+//         .get()
+//         .then(async function (orderSnapshots) {
+//             return orderSnapshots.docs[0].data().price;
+//         });
+// }
 
 var ref = database.collection("pitch");
-ref.limit(12)
+ref.limit()
     .get()
     .then(async function (snapshots) {
         var datas = snapshots.docs;
@@ -400,7 +404,7 @@ ref.limit(12)
         // var data = datas[0].data();
         // console.log(data);
 
-        let cardListElm = document.querySelector(".card-list");
+        
         for (let i = 0; i < datasLength; i++) {
             let data = datas[i].data();
             let serviceData = data.service;
@@ -424,7 +428,7 @@ ref.limit(12)
             cardItemElm.innerHTML = `<div class="card-item">
                                     <a href="./details.html" class="card-item-link">
                                         <div class="card-item-img">
-                                            <img src="${data.img[1]}" alt="">
+                                            <img src="${data.img[0]}" alt="">
                                         </div>
 
                                         <div class="card-item-infor">
@@ -449,4 +453,21 @@ ref.limit(12)
                 window.localStorage.setItem('detail', JSON.stringify(data));
             })
         }
+
     });
+    
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+}
+
+function showPage() {
+    loaderElm.style.display = "none";
+    cardListElm.style.display = "flex";
+    if (paginationElm) {
+        paginationElm.style.display = "block";
+    }
+}
+
+myFunction();

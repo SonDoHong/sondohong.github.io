@@ -5,6 +5,15 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h3,
+h4 {
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 0;
+}
+
 .app {
     
 }
@@ -137,55 +146,31 @@
 }
 
 /* Slider */
-.slider {
-    position: relative;
+.slide {
     max-width: 1200px;
     margin-top: calc(var(--header-heigth) + 30px);
     margin-left: auto;
     margin-right: auto;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    font-size: 20px;
-    color: #333;
-    width: 36px;
-    line-height: 36px;
-    text-align: center;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 3px 6px rgba(0,0,0,.16);
-    display: none;
-}
-
-.slider-btn.prev {
-    left: 0;
-    transform: translate(-50%, -50%);
-}
-
-.slider-btn.next {
-    right: 0;
-    transform: translate(+50%, -50%);
-
-}
-
-.slider-item {
-
-}
-
-.slider-link {
-    display: block;
-}
-
-.slider-link-img {
+.slide img {
     object-fit: cover;
-    width: 100%;
-    height: calc(100vh / 70%);
+    height: 70vw;
+    max-height: 500px;
 }
+
+.carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* End slider */
 
 /* Container */
-.container {
+#container {
     /* max-width: 1200px; */
     margin-top: 30px;
     margin-left: auto;
@@ -195,8 +180,8 @@
 .orientation {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     gap: 16px;
+    margin-top: calc(var(--header-heigth) + 30px);
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.25);
@@ -264,6 +249,7 @@
 
 /* Card */
 .card-list {
+    display: none;
     margin-top: 20px;
 }
 
@@ -295,6 +281,7 @@
 }
 
 .card-item-title {
+    font-size: 16px;
     margin-bottom: 12px;
     height: 34px;
     line-height: 17px;
@@ -335,35 +322,24 @@
 
 /* pagination */
 .pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 30px;
+    display: none;
+    text-align: center;
 }
 
 .pagination .page-item {
-    display: block;
-    color: #555;
-    text-align: center;
+    display: inline-block;
+    padding: 8px 20px;
     text-decoration: none;
-    /* width: 32px; */
-    height: 32px;
-    line-height: 32px;
-    padding: 0 12px;
+    color: #333;
     border: 1px solid #ccc;
     border-radius: 4px;
+
 }
 
 .pagination .page-item:hover {
     color: #fff;
-    background-color: #7370ff;
-}
-
-.pagination .page-item.active {
-    color: #fff;
-    background-color: #ff4949;
-    border-color: #ff4949;
+    background-color: #3cd300;
+    border: 1px solid #3cd300;
 }
 
 /* footer */

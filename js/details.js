@@ -19,6 +19,10 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.firestore();
 var ref = database.collection("time");
 
+let loaderElm = document.querySelector('.test');
+let containerElm = document.querySelector('.container');
+let footerElm = document.querySelector('.footer');
+
 ref.get().then(async function(snapshots) {
     var datas = snapshots.docs;
     var datasLength = datas.length;
@@ -28,7 +32,6 @@ ref.get().then(async function(snapshots) {
     
 
     // phần đặt thuê sân
-
     let pitchPutElm = document.querySelector('.pitch_put-body');
     for (let i = 0; i < datasLength; i++) {
         let data = datas[i].data();
@@ -37,7 +40,6 @@ ref.get().then(async function(snapshots) {
 
         // lấy giá từ data time
         if(detail.times == dataId) {
-            console.log(data);
             pitchPutElm.innerHTML = `<table>
                                         <tr>
                                             <th>GIỜ TRỐNG</th>
@@ -76,7 +78,22 @@ ref.get().then(async function(snapshots) {
                                         
                                     </table>`;
         }
+
     }
+    // Click btn pitch put
+    let btnPitchPut = document.querySelectorAll('.btn-pitch_put');
+    btnPitchPut.forEach(function(item) {
+        console.log(item)
+        item.addEventListener('click', function() {
+            if (localStorage.getItem('user-do-an')) {
+                alert('Bạn đã đặt sân thành công!!')
+            } else {
+                alert('Bạn vui lòng đăng nhập tài toàn trước.')
+            }
+            
+        })
+    })
+    // End click btn pitch put
 });
 
 // Tên và Ảnh sân
@@ -98,7 +115,7 @@ function getDetail(product) {
     titleTextElm.textContent = product.title;
     addresText = addresText.slice(0, -3);
     titleTexSubtElm.textContent = addresText;
-    // End ên và địa chỉ sân
+    // End tên và địa chỉ sân
 
     // Phần Show IMg
     imgMainElm.innerHTML = `<img src="${imgs[0]}" alt="Ảnh sân bóng.">`;
@@ -115,5 +132,18 @@ function getDetail(product) {
     }
     // End Show IMG
 }
+// End Tên và Ảnh sân
 
+var myVar;
 
+function myFunction() {
+    myVar = setTimeout(showPage, 1500);
+}
+
+function showPage() {
+    loaderElm.style.display = "none";
+    containerElm.style.display = "block";
+    footerElm.style.marginTop = "50px";
+}
+
+myFunction();

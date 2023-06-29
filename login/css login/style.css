@@ -10,11 +10,11 @@
 
 .btn-login {
     text-decoration: none;
-    color: #19A702;
+    color: #fff;
 }
 
 .btn-login:hover {
-    color: #26f806;
+    color: #19A702;
 }
 
 label.error {
@@ -25,12 +25,15 @@ label.error {
 }
 
 #done {
-    display: inline-block;
+    display: block;
     color: #fff;
+    text-align: center;
     background-color: red;
+    padding: 0 16px;
+    margin-top: 10px;
+    line-height: 36px;
+    border-radius: 4px;
     text-decoration: none;
-    font-weight: 600;
-    padding: 8px 16px;
     opacity: 0.8;
 }
 

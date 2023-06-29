@@ -1,10 +1,13 @@
 
 var formSearchElm = document.querySelector('.header-search');
 var searchInputElm = document.querySelector('#search');
+console.log(ref)
 
 formSearchElm.addEventListener('submit', function(e) {
     e.preventDefault();
     
+    console.log(database)
+    // var ref = database.collection('pitch');
     ref.get().then(async function(snapshots) {
         var datas = snapshots.docs;
         var datasLength = datas.length;
@@ -36,9 +39,9 @@ formSearchElm.addEventListener('submit', function(e) {
                 if (dataTitle.includes(valueSearch) == true && i < 11) {
                     div += `<div class="grid_col-3 grid_col-4 grid_col-6-s">
                                 <div class="card-item">
-                                    <a href="#" class="card-item-link">
+                                    <a href="./details.html" class="card-item-link">
                                         <div class="card-item-img">
-                                            <img src="${data.img[1]}" alt="">
+                                            <img src="${data.img[0]}" alt="">
                                         </div>
 
                                         <div class="card-item-infor">
@@ -70,10 +73,6 @@ formSearchElm.addEventListener('submit', function(e) {
         } else {
             alert('vui lòng nhập tên sân.');
         }
-
-        // console.log(div)
-        // cardListElm.append(div);
-        // console.log(datas[5].data().title);
     })
 
 })
