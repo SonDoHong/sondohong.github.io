@@ -83,12 +83,11 @@ ref.get().then(async function(snapshots) {
     // Click btn pitch put
     let btnPitchPut = document.querySelectorAll('.btn-pitch_put');
     btnPitchPut.forEach(function(item) {
-        console.log(item)
         item.addEventListener('click', function() {
             if (localStorage.getItem('user-do-an')) {
-                alert('Bạn đã đặt sân thành công!!')
+                alert('Bạn đã đặt sân thành công.')
             } else {
-                alert('Bạn vui lòng đăng nhập tài toàn trước.')
+                alert('Bạn vui lòng đăng nhập tài Khoản trước.')
             }
             
         })
@@ -105,16 +104,10 @@ function getDetail(product) {
     let addres = product.addres;
     let imgs = product.img;
     let imgsLength = imgs.length;
-    let addresText = '';
     
     // Phần Tên và địa chỉ sân
-    for (let key in addres) {
-        addresText += (addres[key] + ' - ');
-    }
-
     titleTextElm.textContent = product.title;
-    addresText = addresText.slice(0, -3);
-    titleTexSubtElm.textContent = addresText;
+    titleTexSubtElm.textContent = addres;
     // End tên và địa chỉ sân
 
     // Phần Show IMg

@@ -1,7 +1,6 @@
 
 var formSearchElm = document.querySelector('.header-search');
 var searchInputElm = document.querySelector('#search');
-console.log(ref)
 
 formSearchElm.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -25,18 +24,40 @@ formSearchElm.addEventListener('submit', function(e) {
                 let dataService = data.service;
                 let cardItemFooterElm = "";
 
+                console.log(data)
+
                 for (let key in dataService) {
                     if (dataService[key] == true) {
-                        cardItemFooterElm += `<div class="card-item-footer-item">
-                                                <i class="fa-solid fa-check"></i>
-                                                <span>${key}</span>
-                                            </div>`;
+                        if (key == 'livestream') {
+                            cardItemFooterElm += `<div class="card-item-footer-item">
+                            <i class="fa-solid fa-video"></i>
+                                                    <span>${key}</span>
+                                                </div>`;
+                        }
+                        if (key == 'canteen') {
+                            cardItemFooterElm += `<div class="card-item-footer-item">
+                            <i class="fa-solid fa-utensils"></i>
+                                                    <span>${key}</span>
+                                                </div>`;
+                        }
+                        if (key == 'parking') {
+                            cardItemFooterElm += `<div class="card-item-footer-item">
+                            <i class="fa-solid fa-motorcycle"></i>
+                                                    <span>${key}</span>
+                                                </div>`;
+                        }
+                        if (key == 'wifi') {
+                            cardItemFooterElm += `<div class="card-item-footer-item">
+                            <i class="fa-solid fa-wifi"></i>
+                                                    <span>${key}</span>
+                                                </div>`;
+                        }
                     }
                 }
 
 
                 // có limit
-                if (dataTitle.includes(valueSearch) == true && i < 11) {
+                if (dataTitle.includes(valueSearch) == true) {
                     div += `<div class="grid_col-3 grid_col-4 grid_col-6-s">
                                 <div class="card-item">
                                     <a href="./details.html" class="card-item-link">
@@ -49,7 +70,7 @@ formSearchElm.addEventListener('submit', function(e) {
 
                                             
                                             <div class="card-item-price">Giá: <span>400.000 VND</span> / Trận</div>
-                                            <p>Địa chỉ: Hà Nội</p>
+                                            <p>Địa chỉ: ${data.addres}</p>
                                         </div>
 
                                         <div class="card-item-footer">

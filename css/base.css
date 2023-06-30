@@ -1,5 +1,7 @@
 :root {
     --header-heigth: 68px;
+    --color-primery: #3cd300;
+    --color-white: #ffff;
 }
 
 .grid {

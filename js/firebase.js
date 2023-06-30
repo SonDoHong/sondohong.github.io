@@ -33,6 +33,8 @@ ref.limit(12).get().then(async function(snapshots) {
         let  cardItemFooter = '';
         let carouselListElm = document.querySelector('.carousel-inner');
 
+
+
         // Cho slider hiện 5 img
         if (i < 5) {
             carouselListElm.innerHTML += `<div class="carousel-item">
@@ -40,7 +42,7 @@ ref.limit(12).get().then(async function(snapshots) {
                                                 <img src="${data.img[0]}" class="d-block w-100" alt="...">
                                                 <div class="carousel-caption d-md-block">
                                                     <h5>${data.title}</h5>
-                                                    <p>Địa chỉ: ${data.addres.district} - ${data.addres.city}.</p>
+                                                    <p>Địa chỉ: ${data.addres}.</p>
                                                 </div>
                                             </a>
                                         </div>`;
@@ -65,11 +67,30 @@ ref.limit(12).get().then(async function(snapshots) {
         // Rồi gắn vào thẻ cardItemFooter
         for (let key in serviceData) {
             if (serviceData[key] == true) {
-    
-                cardItemFooter += `<div class="card-item-footer-item">
-                                        <i class="fa-solid fa-check"></i>
-                                        <span>${key}</span>
-                                    </div>`;
+                if (key == 'livestream') {
+                    cardItemFooter += `<div class="card-item-footer-item">
+                    <i class="fa-solid fa-video"></i>
+                                            <span>${key}</span>
+                                        </div>`;
+                }
+                if (key == 'canteen') {
+                    cardItemFooter += `<div class="card-item-footer-item">
+                    <i class="fa-solid fa-utensils"></i>
+                                            <span>${key}</span>
+                                        </div>`;
+                }
+                if (key == 'parking') {
+                    cardItemFooter += `<div class="card-item-footer-item">
+                    <i class="fa-solid fa-motorcycle"></i>
+                                            <span>${key}</span>
+                                        </div>`;
+                }
+                if (key == 'wifi') {
+                    cardItemFooter += `<div class="card-item-footer-item">
+                    <i class="fa-solid fa-wifi"></i>
+                                            <span>${key}</span>
+                                        </div>`;
+                }
             }
         }
 
@@ -87,7 +108,7 @@ ref.limit(12).get().then(async function(snapshots) {
 
                                             
                                             <div class="card-item-price">Giá: <span>400.000 VND</span> / Trận</div>
-                                            <p>Địa chỉ: ${data.addres.district} - ${data.addres.city}</p>
+                                            <p>Địa chỉ: ${data.addres}</p>
                                         </div>
 
                                         <div class="card-item-footer">
@@ -99,7 +120,6 @@ ref.limit(12).get().then(async function(snapshots) {
         cardListElm.append(cardItemElm); 
 
         cardItemElm.addEventListener('click', function(e) {
-            console.log(this);
             // window.localStorage.clear();
             window.localStorage.setItem('detail', JSON.stringify(data));
         })
