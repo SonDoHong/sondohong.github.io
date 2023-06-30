@@ -33,8 +33,6 @@ ref.limit(12).get().then(async function(snapshots) {
         let  cardItemFooter = '';
         let carouselListElm = document.querySelector('.carousel-inner');
 
-
-
         // Cho slider hiện 5 img
         if (i < 5) {
             carouselListElm.innerHTML += `<div class="carousel-item">

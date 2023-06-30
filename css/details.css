@@ -12,7 +12,8 @@
 }
 
 .title {
-    background: #E7E7E7;
+    color: var(--color-white);
+    background: var(--color-primery);
     padding: 20px;
 }
 
@@ -92,7 +93,8 @@
 }
 
 .pitch_put-heading {
-    background-color: #E7E7E7;
+    color: var(--color-white);
+    background-color: var(--color-primery);
     padding: 16px 24px;
     border-radius: 4px;
 }
@@ -138,7 +140,8 @@
 }
 
 .pitch_service-heading {
-    background-color: #E7E7E7;
+    color: var(--color-white);
+    background-color: var(--color-primery);
     padding: 16px 24px;
     border-radius: 4px;
 }
